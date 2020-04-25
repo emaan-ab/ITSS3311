@@ -1,0 +1,41 @@
+		import java.util.Scanner;
+		public class array {
+    
+    //SAMPLE RUN:
+    //Enter 5 elements of list1: 1 2 3 4 5
+    //Enter 5 elements of list2: 1 2 3 4 5
+    //Two lists are strictly identical.
+
+		    public static boolean equals(int[] array1, int[] array2){ //implementing the equals method
+		        for(int i = 0;i<array1.length;i++){ //determine the size of an array
+		            if(array1[i]!=array2[i]){ //check if arrays are equal or not
+		                return false; //if not equal return false
+		            }
+		        }
+		        return true; //if equal return true
+		    }
+
+		    public static void main(String[] args) {
+		        Scanner scanner = new Scanner(System.in);
+		        int array1[] = new int[5]; //initialize first array
+		        int array2[] = new int[5]; //initialize second array
+
+		        System.out.print("Enter 5 elements of list1: "); //prompt to enter first 5 elements of 1st array
+		        for(int i = 0;i<5;i++){  //repeat first array
+		            array1[i] = scanner.nextInt(); //entering values of the array
+		        }
+
+		        System.out.print("Enter 5 elements of list2: "); ///prompt to enter first 5 elements of 2nd array
+		        for(int i = 0;i<5;i++){ //repeat second array
+		            array2[i] = scanner.nextInt(); //entering values of the array
+		        }
+
+		        if(equals(array1,array2)){
+		            System.out.println("Two lists are strictly identical."); //if identical then print lists are identical
+		        }
+		        else{  //else print not identical
+		            System.out.println("Two lists are not strictly identical.");
+		        }
+		    }
+
+	}
